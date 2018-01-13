@@ -7,19 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JongwanApplication {
 	/*
 		To Do
-		1. JedisPoolConfig의 역할?
-		  -> 커넥션을 위해 필요한Jedis 객체를 모아두는 역할
-
-         2. 레디스 캐시 이용법
-
-         3. @Resource, @Component 차이
-
-		 4. String의 valueOf와 parse 차이
 
 		Question
 
 
-		Finished
+		Finishd
 		1. 레디스템플릿에 Operation 종류가 많은 이유?
 		    -> value에 데이터형에 따라 사용할 Operation을 결정하면된다
 
@@ -30,6 +22,21 @@ public class JongwanApplication {
         2. setKeySerializer, setValueSerializer 어떤거 사용할지 어떻게 판단
 		  -> key, value를 레디스에 저장하거나 불러올때 어떤식으로 저장 불러올지(string, json(객체) 등)를 나타낸다
 		      특히 커스텀 클래스를 저장할 때, JacksonJsonRedisSerializer를 이용하면 유용하게 쓸 수 있다.
+
+		3. 레디스 캐시 이용법
+		   -> @EnableCaching + 캐시매니저 등록 + @Cacheable
+
+		4. String의 valueOf와 parse 차이
+
+          -> valueOf(String)은 객체를 반환(new Integer()), parseInt(String)은 기본 자료형(int) 반환
+
+        5. @Resource, @Autowired
+           -> @Autowired는 스프링 프레임워크 어노테이션이다. 그렇기 때문에 스프링을 사용하지 않는 환경에서는 @Resource를 사용해야 한다.
+
+		6. JedisPoolConfig의 역할?
+		  -> 커넥션객체를 모아두는 풀에대한 설정을 하는 역할
+
+
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(JongwanApplication.class, args);
