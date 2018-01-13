@@ -12,6 +12,10 @@ public class JongwanApplication {
 
          2. 레디스 캐시 이용법
 
+         3. @Resource, @Component 차이
+
+		 4. String의 valueOf와 parse 차이
+
 		Question
 
 
